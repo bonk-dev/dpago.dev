@@ -3,7 +3,6 @@ import EditPencilIcon from "./assets/icons/EditPencilIcon.tsx";
 import GitHubIcon from "./assets/icons/GitHubIcon.tsx";
 import AtSymbolIcon from "./assets/icons/AtSymbolIcon.tsx";
 
-// TODO: Add icons
 const HeroLinks = () => {
     return (
         <div className='uppercase text-2xl font-mono tracking-[.61em] self-start'>
