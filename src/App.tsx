@@ -6,8 +6,8 @@ import AtSymbolIcon from "./assets/icons/AtSymbolIcon.tsx";
 // TODO: Add icons
 const HeroLinks = () => {
     return (
-        <div className='justify-self-center uppercase text-2xl font-mono tracking-[.61em]'>
-            <a href='#' className='pr-8 border-purple-700 border-r-2 border-solid flex-row justify-center items-center'>
+        <div className='uppercase text-2xl font-mono tracking-[.61em] self-start'>
+            <a href='#' className='pr-8 border-purple-700 border-r-2 border-solid'>
                 <EditPencilIcon className='inline mr-3 w-9 h-7'/>
                 Projekty
             </a>
@@ -26,10 +26,8 @@ const HeroLinks = () => {
 // TODO: Add decors
 const HeroSection = () => {
     return (
-        <section className='w-full h-screen grid grid-rows-[minmax(0,_1fr)_200px_minmax(0,_1fr)]'>
-            <div className='flex justify-center items-end'>
-                <Logo includeMd5={true} className='w-52 h-auto'/>
-            </div>
+        <section className='w-full h-screen grid grid-rows-[minmax(0,_1fr)_200px_minmax(0,_1fr)] items-center place-items-center'>
+            <Logo includeMd5={true} className='w-52 h-auto items-end self-end'/>
 
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='uppercase font-mono font-medium text-5xl'>
