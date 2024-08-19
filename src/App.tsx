@@ -1,12 +1,24 @@
 import Logo from "./decors/Logo.tsx";
+import EditPencilIcon from "./assets/icons/EditPencilIcon.tsx";
+import GitHubIcon from "./assets/icons/GitHubIcon.tsx";
+import AtSymbolIcon from "./assets/icons/AtSymbolIcon.tsx";
 
 // TODO: Add icons
 const HeroLinks = () => {
     return (
         <div className='justify-self-center uppercase text-2xl font-mono tracking-[.61em]'>
-            <a href='#' className='pr-8 border-purple-700 border-r-2 border-solid'>Projekty</a>
-            <a href='#' className='pl-12 pr-8 border-purple-700 border-r-2 border-solid'>GitHub</a>
-            <a href='#' className='pl-12'>Kontakt</a>
+            <a href='#' className='pr-8 border-purple-700 border-r-2 border-solid flex-row justify-center items-center'>
+                <EditPencilIcon className='inline mr-3 w-9 h-7'/>
+                Projekty
+            </a>
+            <a href='#' className='pl-12 pr-8 border-purple-700 border-r-2 border-solid'>
+                <GitHubIcon className='inline mr-3 w-9 h-9'/>
+                GitHub
+            </a>
+            <a href='#' className='pl-12'>
+                <AtSymbolIcon className='inline mr-3 w-9 h-7'/>
+                Kontakt
+            </a>
         </div>
     );
 };
