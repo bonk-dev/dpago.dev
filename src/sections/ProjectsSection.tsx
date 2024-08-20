@@ -62,7 +62,7 @@ interface ProjectProps {
 
 const Project = ({ title, description, links, badges }: ProjectProps) => {
     return (
-        <article className='w-full bg-stone-100 p-8 flex flex-col'>
+        <article className='flex-1 bg-stone-100 p-8 flex flex-col'>
             <header className='text-center font-semibold text-3xl'>
                 <h2>{title}</h2>
             </header>
@@ -116,7 +116,7 @@ const ProjectsSection = () => {
                 Projects
             </SectionHeader>
 
-            <div className='flex flex-row space-x-12'>
+            <div className='flex flex-row flex-wrap gap-12'>
                 {
                     projects.length > 0 ? (
                         projects.slice(0, 3).map((project: ProjectProps) => (
