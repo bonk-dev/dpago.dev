@@ -11,6 +11,8 @@ export default {
       'sans': ['Inter']
     }
   },
-  plugins: [],
+  plugins: [
+      require('@tailwindcss/typography')
+  ],
 }
 
