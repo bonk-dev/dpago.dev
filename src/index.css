@@ -5,6 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
+@layer base{
+    ul {
+        @apply list-disc;
+        @apply pl-10;
+        @apply mt-1
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
 
