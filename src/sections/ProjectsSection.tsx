@@ -1,5 +1,20 @@
 import SectionHeader from "../decors/SectionHeader.tsx";
 import {useEffect, useState} from "react";
+import LinkIcon from "../assets/icons/LinkIcon.tsx";
+
+interface LinkItemProps {
+    to: string,
+    label: string
+}
+
+const LinkItem = ({ to, label }: LinkItemProps) => {
+    return (
+        <div className='flex flex-row items-center space-x-1'>
+            <LinkIcon width={'18'} height={'18'}/>
+            <a className='text-purple-600 font-medium' href={to}>{label}</a>
+        </div>
+    );
+};
 
 interface Link {
     to: string,
@@ -12,9 +27,9 @@ interface ProjectProps {
     links: Link[]
 }
 
-const Project = ({ title, description }: ProjectProps) => {
+const Project = ({ title, description, links }: ProjectProps) => {
     return (
-        <article className='w-full bg-stone-100 p-8'>
+        <article className='w-full bg-stone-100 p-8 flex flex-col'>
             <header className='text-center font-semibold text-3xl'>
                 <h2>{title}</h2>
             </header>
@@ -24,8 +39,12 @@ const Project = ({ title, description }: ProjectProps) => {
             {/* TODO: Use DOMPurify */}
             <p dangerouslySetInnerHTML={{ __html: description }} className='mt-3'></p>
 
-            <section>
-                {/*  TODO: Add links  */}
+            <section className='mt-8 flex flex-col justify-end h-full bottom-0'>
+                {links.length > 0 ? (
+                    links.map(l =>
+                        <LinkItem label={l.label} to={l.to}/>
+                    )
+                ) : null}
             </section>
         </article>
     );
