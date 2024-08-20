@@ -1,0 +1,44 @@
+[
+    {
+        "title": "XeonPWM",
+        "description": "XEON PWM is an application which I developed to control my server fans using my homemade controller.<br><br>The frontend part is written using React + NextUI. The app mainly uses SignalR to communicate with the backend.<br><br>The backend part uses the ASP.NET Core framework. Settings and users are stored in a SQLite database using the EF Core framework. SignalR (websockets) are used to update temperatures etc.",
+        "links": [
+            {
+                "to": "https://github.com",
+                "label": "GitHub (frontned)"
+            },
+            {
+                "to": "https://github.com",
+                "label": "GitHub (backend)"
+            }
+        ]
+    },
+    {
+        "title": "HarpoS7",
+        "description": "HarpoS7 is a C# library for authenticating sessions in the S7 Comm Plus protocol.<ul><li>It was developed with low memory allocation in mind</li><li>Fully managed</li><li>Supports challenge-based authentication (pre-V17 TIA portal)</li><li>Supports TLS authentication (post-V17 TIA portal)</li><li>Supports password authorization</li><li>Tested on real devices</li></ul>",
+        "links": [
+            {
+                "to": "https://github.com",
+                "label": "GitHub"
+            },
+            {
+                "to": "https://nuget.com",
+                "label": "NuGet"
+            }
+        ]
+    },
+    {
+        "title": "ArchTranslator",
+        "description": "ArchTranslator is a set of useful tools for ArchWiki translators, written in TypeScript.<ul><li>Copies and pastes the original source</li><li>Inserts the localized {{TranslationStatus}} template</li><li>Inserts the English interlanguage link</li><li>Sorts the header elements according to the ArchWiki style</li><li>Scans the page content for already translated articles</li></ul>",
+        "links": [
+            {
+                "to": "https://github.com",
+                "label": "GitHub"
+            },
+            {
+                "to": "https://greasyfork.org",
+                "label": "GreasyFork"
+            }
+        ]
+    }
+]
