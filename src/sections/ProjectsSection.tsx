@@ -1,6 +1,38 @@
 import SectionHeader from "../decors/SectionHeader.tsx";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import LinkIcon from "../assets/icons/LinkIcon.tsx";
+import Css3BadgeIcon from "../assets/icons/Css3BadgeIcon.tsx";
+import TypeScriptBadgeIcon from "../assets/icons/TypeScriptBadgeIcon.tsx";
+import ReactJsBadgeIcon from "../assets/icons/ReactJsBadgeIcon.tsx";
+
+const matchBadgeToIcon = (badgeText: string): React.ReactNode | null => {
+    switch (badgeText) {
+        case "REACT":
+            return <ReactJsBadgeIcon width={'21'} height={'19'}/>
+        case "TYPESCRIPT":
+            return <TypeScriptBadgeIcon/>
+        case "CSS3":
+            return <Css3BadgeIcon/>
+        default:
+            return null;
+    }
+};
+
+interface BadgeProps {
+    icon?: React.ReactNode,
+    children: React.ReactNode
+}
+
+const Badge = ({ icon, children }: BadgeProps) => {
+    return (
+        <div className='flex flex-row items-center justify-center py-1.5 px-3 bg-violet-700 text-white font-medium text-sm space-x-1'>
+            {icon}
+            <span>
+                {children}
+            </span>
+        </div>
+    );
+};
 
 interface LinkItemProps {
     to: string,
@@ -24,17 +56,26 @@ interface Link {
 interface ProjectProps {
     title: string,
     description: string,
-    links: Link[]
+    links: Link[],
+    badges: string[]
 }
 
-const Project = ({ title, description, links }: ProjectProps) => {
+const Project = ({ title, description, links, badges }: ProjectProps) => {
     return (
         <article className='w-full bg-stone-100 p-8 flex flex-col'>
             <header className='text-center font-semibold text-3xl'>
                 <h2>{title}</h2>
             </header>
 
-            {/*  TODO: Add badges  */}
+            <section className='flex flex-row justify-center items-center space-x-2 mt-2'>
+                {
+                    badges.length > 0 ? (
+                        badges.map(b =>
+                            <Badge icon={matchBadgeToIcon(b)}>{b}</Badge>
+                        )
+                    ) : null
+                }
+            </section>
 
             {/* TODO: Use DOMPurify */}
             <p dangerouslySetInnerHTML={{ __html: description }} className='mt-3'></p>
@@ -79,7 +120,12 @@ const ProjectsSection = () => {
                 {
                     projects.length > 0 ? (
                         projects.slice(0, 3).map((project: ProjectProps) => (
-                            <Project title={project.title} description={project.description} links={project.links}/>
+                            <Project
+                                title={project.title}
+                                description={project.description}
+                                links={project.links}
+                                badges={project.badges}
+                            />
                         ))
                     ) : (
                         <p>Loading projects...</p>
