@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'mono': ['Fira Code']
+      'mono': ['Fira Code'],
+      'sans': ['Inter']
     }
   },
   plugins: [],
