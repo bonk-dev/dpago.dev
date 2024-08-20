@@ -111,7 +111,7 @@ const ProjectsSection = () => {
     }, []);
 
     return (
-        <section className='w-full min-h-screen px-44 pb-16 flex flex-col'>
+        <section className='w-full min-h-screen px-80 pb-16 flex flex-col'>
             <SectionHeader>
                 Projects
             </SectionHeader>
