@@ -86,7 +86,7 @@ export const Navbar = ({ show }: NavbarProps) => {
                         text-xl font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
             <a className='flex flex-row items-center gap-3' href='/'>
                 <Logo includeMd5={false} width={'55'} height={'48'}/>
-                <p className='font-mono font-medium text-3xl mt-2 tracking-normal'>dpago.dev</p>
+                <p className='font-mono font-medium text-3xl mt-2 tracking-normal text-black dark:text-white'>dpago.dev</p>
             </a>
 
             <div>
