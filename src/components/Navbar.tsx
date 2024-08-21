@@ -2,10 +2,7 @@ import Logo from "./Logo.tsx";
 import EditPencilIcon from "../assets/icons/EditPencilIcon.tsx";
 import GitHubIcon from "../assets/icons/GitHubIcon.tsx";
 import AtSymbolIcon from "../assets/icons/AtSymbolIcon.tsx";
-
-interface NavbarLinksProps {
-    smallPadding: boolean
-}
+import React from "react";
 
 const NavbarLinkBackground = () => {
     return (
@@ -15,31 +12,61 @@ const NavbarLinkBackground = () => {
     );
 };
 
-export const NavbarLinks = ({smallPadding}: NavbarLinksProps) => {
+interface NavbarLinkProps {
+    children: React.ReactNode,
+    icon: React.ReactNode,
+    smallPadding: boolean,
+    to: string
+}
+
+const NavbarLink = ({ children, icon, smallPadding, to }: NavbarLinkProps) => {
     const paddingClass = smallPadding
         ? 'px-10 py-5'
         : 'px-12 py-5';
-    const generalClass = 'inline-block relative [&>span]:hover:w-full transition-colors border-violet-700 border-r-2 border-solid';
-    const hoverClass = ' hover:text-white';
+    const generalClass = 'inline-block relative [&>span]:hover:w-full transition-colors border-violet-700 border-r-2 ' +
+                         'border-solid [&:last-child]:border-none';
+    const hoverClass = 'hover:text-white';
     const className = `${paddingClass} ${generalClass} ${hoverClass}`;
 
     return (
+        <a href={to} className={className}>
+            <NavbarLinkBackground/>
+            <div aria-hidden='true' className='inline [&>svg]:inline mr-3 [&>*]:w-7 [&>*]:h-7'>
+                {icon}
+            </div>
+            {children}
+        </a>
+    );
+};
+
+interface NavbarLinksProps {
+    smallPadding: boolean
+}
+
+export const NavbarLinks = ({ smallPadding }: NavbarLinksProps) => {
+    return (
         <>
-            <a href='#' className={className}>
-                <NavbarLinkBackground/>
-                <EditPencilIcon className='inline mr-3 w-7 h-7'/>
+            <NavbarLink
+                icon={<EditPencilIcon/>}
+                smallPadding={smallPadding}
+                to={'#'}
+            >
                 Projekty
-            </a>
-            <a href='#' className={className}>
-                <NavbarLinkBackground/>
-                <GitHubIcon className='inline mr-3 w-7 h-7'/>
+            </NavbarLink>
+            <NavbarLink
+                icon={<GitHubIcon/>}
+                smallPadding={smallPadding}
+                to={'#'}
+            >
                 GitHub
-            </a>
-            <a href='#' className={`${className} border-none`}>
-                <NavbarLinkBackground/>
-                <AtSymbolIcon className='inline mr-3 w-7 h-7'/>
+            </NavbarLink>
+            <NavbarLink
+                icon={<AtSymbolIcon/>}
+                smallPadding={smallPadding}
+                to={'#'}
+            >
                 Kontakt
-            </a>
+            </NavbarLink>
         </>
     );
 
