@@ -2,7 +2,7 @@ import React from "react";
 
 const DecorLine = () => {
     return (
-        <span className='h-[2px] bg-purple-700 flex-1'></span>
+        <span className='h-[2px] bg-purple-700 dark:bg-violet-600 flex-1'></span>
     );
 };
 

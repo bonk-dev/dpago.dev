@@ -10,7 +10,7 @@ interface ProseSectionProps {
 
 const ProseSection = ({ children, header }: ProseSectionProps) => {
     return (
-        <section className='prose'>
+        <section className='prose dark:prose-invert'>
             <header>
                 <h3>{header}</h3>
             </header>
@@ -52,7 +52,7 @@ const ContactSection = () => {
                     </ProseSection>
                 </div>
 
-                <section className='text-purple-600 underline font-semibold text-4xl'>
+                <section className='text-purple-600 dark:text-violet-500 underline font-semibold text-4xl'>
                     <div className='flex flex-row items-center gap-2'>
                         <AtSymbolIcon width={'3rem'} height={'3rem'}/>
                         <a href='mailto:contact@dpago.dev'>contact@dpago.dev</a>

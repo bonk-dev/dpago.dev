@@ -82,8 +82,8 @@ export const Navbar = ({ show }: NavbarProps) => {
         : '-translate-y-full';
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-10 px-80 bg-stone-100 py-4 flex flex-row justify-between items-center +
-                        text-xl font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix} `}>
+        <nav className={`fixed top-0 left-0 right-0 z-10 px-80 bg-stone-100 dark:bg-stone-950 py-4 flex flex-row justify-between items-center +
+                        text-xl font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
             <a className='flex flex-row items-center gap-3' href='/'>
                 <Logo includeMd5={false} width={'55'} height={'48'}/>
                 <p className='font-mono font-medium text-3xl mt-2 tracking-normal'>dpago.dev</p>

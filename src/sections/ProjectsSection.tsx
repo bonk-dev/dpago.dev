@@ -43,7 +43,7 @@ const LinkItem = ({ to, label }: LinkItemProps) => {
     return (
         <div className='flex flex-row items-center space-x-1'>
             <LinkIcon width={'18'} height={'18'}/>
-            <a className='text-purple-600 font-medium' href={to}>{label}</a>
+            <a className='text-purple-600 dark:text-purple-400 font-medium' href={to}>{label}</a>
         </div>
     );
 };
@@ -62,7 +62,7 @@ interface ProjectProps {
 
 const Project = ({ title, description, links, badges }: ProjectProps) => {
     return (
-        <article className='flex-1 bg-stone-100 p-8 flex flex-col'>
+        <article className='flex-1 bg-stone-100 dark:bg-zinc-950 p-8 flex flex-col'>
             <header className='text-center font-semibold text-3xl'>
                 <h2>{title}</h2>
             </header>
@@ -135,7 +135,7 @@ const ProjectsSection = () => {
             </div>
 
             <div className='flex flex-1 justify-self-center self-center items-center mt-20'>
-                <p className='text-4xl text-gray-500'>Many more projects on the horizon</p>
+                <p className='text-4xl text-gray-500 dark:text-zinc-400'>Many more projects on the horizon</p>
             </div>
         </section>
     );
