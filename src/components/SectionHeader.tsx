@@ -12,7 +12,7 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ children }: SectionHeaderProps) => {
     return (
-        <header className='flex flex-row items-center py-8'>
+        <header className='flex flex-row items-center py-8 pt-28'>
             <DecorLine/>
             <h1 className='uppercase text-4xl font-semibold px-6'>{children}</h1>
             <DecorLine/>
