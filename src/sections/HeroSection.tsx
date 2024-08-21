@@ -1,16 +1,49 @@
 import Logo from "../components/Logo.tsx";
 import {NavbarLinks} from "../components/Navbar.tsx";
+import {useCallback, useEffect, useRef, useState} from "react";
 
-const HeroLinks = () => {
+interface ScrolledByProps {
+    onScrolledByHeroLinks: (areHeroLinksHidden: boolean) => void
+}
+
+const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
+    const linksContainerRef = useRef<HTMLDivElement>(null);
+    const [lastAreHeroLinksHidden, setLastAreHeroLinksHidden] = useState(true);
+
+    const handleScroll = useCallback(() => {
+        if (linksContainerRef.current == null) {
+            return;
+        }
+
+        const rect = linksContainerRef.current.getBoundingClientRect();
+        if (rect.y < 0 && !lastAreHeroLinksHidden) {
+            setLastAreHeroLinksHidden(true);
+            onScrolledByHeroLinks(true);
+        }
+        else if (rect.y >= 0 && lastAreHeroLinksHidden) {
+            setLastAreHeroLinksHidden(false);
+            onScrolledByHeroLinks(false);
+        }
+
+    }, [onScrolledByHeroLinks, lastAreHeroLinksHidden]);
+
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        };
+    }, [handleScroll]);
+
     return (
-        <div className='uppercase text-2xl font-mono tracking-[.61em] self-start'>
+        <div className='uppercase text-2xl font-mono tracking-[.61em] self-start' ref={linksContainerRef}>
             <NavbarLinks smallPadding={false}/>
         </div>
     );
 };
 
 // TODO: Add decors
-const HeroSection = () => {
+const HeroSection = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     return (
         <section className='w-full h-screen grid grid-rows-[minmax(0,_1fr)_200px_minmax(0,_1fr)] items-center place-items-center'>
             <Logo includeMd5={true} className='w-52 h-auto items-end self-end'/>
@@ -24,7 +57,7 @@ const HeroSection = () => {
                 </h2>
             </div>
 
-            <HeroLinks/>
+            <HeroLinks onScrolledByHeroLinks={onScrolledByHeroLinks}/>
         </section>
     );
 };
