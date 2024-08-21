@@ -8,7 +8,7 @@ interface ScrolledByProps {
 
 const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     const linksContainerRef = useRef<HTMLDivElement>(null);
-    const [lastAreHeroLinksHidden, setLastAreHeroLinksHidden] = useState(true);
+    const [lastAreHeroLinksHidden, setLastAreHeroLinksHidden] = useState<boolean|null>(null);
 
     const checkPosition = useCallback(() => {
         if (linksContainerRef.current == null) {
@@ -38,7 +38,7 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
             document.removeEventListener('scroll', checkPosition);
             document.removeEventListener('DOMContentLoaded', checkPosition);
         };
-    }, [checkPosition]);
+    }, [checkPosition, onScrolledByHeroLinks]);
 
     return (
         <div className='uppercase text-2xl font-mono tracking-[.61em] self-start' ref={linksContainerRef}>
