@@ -51,7 +51,7 @@ export const NavbarLinks = ({ smallPadding }: NavbarLinksProps) => {
                 smallPadding={smallPadding}
                 to={'#'}
             >
-                Projekty
+                Projects
             </NavbarLink>
             <NavbarLink
                 icon={<GitHubIcon/>}
@@ -65,7 +65,7 @@ export const NavbarLinks = ({ smallPadding }: NavbarLinksProps) => {
                 smallPadding={smallPadding}
                 to={'#'}
             >
-                Kontakt
+                Contact
             </NavbarLink>
         </>
     );
