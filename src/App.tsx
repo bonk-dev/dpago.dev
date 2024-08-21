@@ -16,7 +16,7 @@ function App() {
     return (
         <>
             <Background/>
-            <div className='selection:bg-violet-300 dark:text-white'>
+            <div className='selection:bg-violet-300 dark:selection:bg-violet-800 dark:text-white'>
                 <Navbar show={showNavbar}/>
                 <HeroSection onScrolledByHeroLinks={setShowNavbar}/>
                 <ProjectsSection/>
