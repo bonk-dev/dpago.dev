@@ -7,23 +7,37 @@ interface NavbarLinksProps {
     smallPadding: boolean
 }
 
-export const NavbarLinks = ({ smallPadding }: NavbarLinksProps) => {
+const NavbarLinkBackground = () => {
+    return (
+        <span className='absolute top-0 bottom-0 left-0 h-full w-0 transition-[width] inline-block bg-violet-700 -z-10'
+              aria-hidden='true'>
+        </span>
+    );
+};
+
+export const NavbarLinks = ({smallPadding}: NavbarLinksProps) => {
     const paddingClass = smallPadding
-        ? 'pl-10'
-        : 'pl-12';
+        ? 'px-10 py-5'
+        : 'px-12 py-5';
+    const generalClass = 'inline-block relative [&>span]:hover:w-full transition-colors border-violet-700 border-r-2 border-solid';
+    const hoverClass = ' hover:text-white';
+    const className = `${paddingClass} ${generalClass} ${hoverClass}`;
 
     return (
         <>
-            <a href='#' className='pr-8 border-purple-700 border-r-2 border-solid'>
-                <EditPencilIcon className='inline mr-3 w-9 h-7'/>
+            <a href='#' className={className}>
+                <NavbarLinkBackground/>
+                <EditPencilIcon className='inline mr-3 w-7 h-7'/>
                 Projekty
             </a>
-            <a href='#' className={`${paddingClass} pr-8 border-purple-700 border-r-2 border-solid`}>
-                <GitHubIcon className='inline mr-3 w-9 h-9'/>
+            <a href='#' className={className}>
+                <NavbarLinkBackground/>
+                <GitHubIcon className='inline mr-3 w-7 h-7'/>
                 GitHub
             </a>
-            <a href='#' className={paddingClass}>
-                <AtSymbolIcon className='inline mr-3 w-9 h-7'/>
+            <a href='#' className={`${className} border-none`}>
+                <NavbarLinkBackground/>
+                <AtSymbolIcon className='inline mr-3 w-7 h-7'/>
                 Kontakt
             </a>
         </>
