@@ -71,7 +71,7 @@ const Project = ({ title, description, links, badges }: ProjectProps) => {
                 {
                     badges.length > 0 ? (
                         badges.map(b =>
-                            <Badge icon={matchBadgeToIcon(b)}>{b}</Badge>
+                            <Badge key={b} icon={matchBadgeToIcon(b)}>{b}</Badge>
                         )
                     ) : null
                 }
@@ -83,7 +83,7 @@ const Project = ({ title, description, links, badges }: ProjectProps) => {
             <section className='mt-8 flex flex-col justify-end h-full bottom-0'>
                 {links.length > 0 ? (
                     links.map(l =>
-                        <LinkItem label={l.label} to={l.to}/>
+                        <LinkItem key={l.label + l.to} label={l.label} to={l.to}/>
                     )
                 ) : null}
             </section>
@@ -121,6 +121,7 @@ const ProjectsSection = () => {
                     projects.length > 0 ? (
                         projects.slice(0, 3).map((project: ProjectProps) => (
                             <Project
+                                key={project.title}
                                 title={project.title}
                                 description={project.description}
                                 links={project.links}
