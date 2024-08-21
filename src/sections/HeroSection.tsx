@@ -10,7 +10,7 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     const linksContainerRef = useRef<HTMLDivElement>(null);
     const [lastAreHeroLinksHidden, setLastAreHeroLinksHidden] = useState(true);
 
-    const handleScroll = useCallback(() => {
+    const checkPosition = useCallback(() => {
         if (linksContainerRef.current == null) {
             return;
         }
@@ -28,12 +28,17 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     }, [onScrolledByHeroLinks, lastAreHeroLinksHidden]);
 
     useEffect(() => {
-        document.addEventListener('scroll', handleScroll);
+        if (document.readyState !== 'complete') {
+            window.addEventListener('DOMContentLoaded', checkPosition);
+        }
+
+        document.addEventListener('scroll', checkPosition);
 
         return () => {
-            document.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('scroll', checkPosition);
+            document.removeEventListener('DOMContentLoaded', checkPosition);
         };
-    }, [handleScroll]);
+    }, [checkPosition]);
 
     return (
         <div className='uppercase text-2xl font-mono tracking-[.61em] self-start' ref={linksContainerRef}>
