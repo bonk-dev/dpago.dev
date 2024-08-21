@@ -1,4 +1,4 @@
-import SectionHeader from "../decors/SectionHeader.tsx";
+import SectionHeader from "../components/SectionHeader.tsx";
 import React, {useEffect, useState} from "react";
 import LinkIcon from "../assets/icons/LinkIcon.tsx";
 import Css3BadgeIcon from "../assets/icons/Css3BadgeIcon.tsx";

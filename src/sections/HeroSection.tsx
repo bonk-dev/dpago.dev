@@ -1,4 +1,4 @@
-import Logo from "../decors/Logo.tsx";
+import Logo from "../components/Logo.tsx";
 import EditPencilIcon from "../assets/icons/EditPencilIcon.tsx";
 import GitHubIcon from "../assets/icons/GitHubIcon.tsx";
 import AtSymbolIcon from "../assets/icons/AtSymbolIcon.tsx";

@@ -1,4 +1,4 @@
-import SectionHeader from "../decors/SectionHeader.tsx";
+import SectionHeader from "../components/SectionHeader.tsx";
 import AtSymbolIcon from "../assets/icons/AtSymbolIcon.tsx";
 import GitHubIcon from "../assets/icons/GitHubIcon.tsx";
 import React from "react";
