@@ -8,12 +8,12 @@ function App() {
     const [showNavbar, setShowNavbar] = useState(false);
 
     return (
-        <>
+        <div className='selection:bg-violet-300'>
             <Navbar show={showNavbar}/>
             <HeroSection onScrolledByHeroLinks={setShowNavbar}/>
             <ProjectsSection/>
             <ContactSection/>
-        </>
+        </div>
     )
 }
 
