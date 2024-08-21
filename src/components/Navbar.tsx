@@ -49,7 +49,7 @@ export const NavbarLinks = ({ smallPadding }: NavbarLinksProps) => {
             <NavbarLink
                 icon={<EditPencilIcon/>}
                 smallPadding={smallPadding}
-                to={'#'}
+                to={'#projects'}
             >
                 Projects
             </NavbarLink>
@@ -63,7 +63,7 @@ export const NavbarLinks = ({ smallPadding }: NavbarLinksProps) => {
             <NavbarLink
                 icon={<AtSymbolIcon/>}
                 smallPadding={smallPadding}
-                to={'#'}
+                to={'#contact'}
             >
                 Contact
             </NavbarLink>

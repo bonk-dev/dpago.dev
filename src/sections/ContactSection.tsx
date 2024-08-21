@@ -23,7 +23,7 @@ const ProseSection = ({ children, header }: ProseSectionProps) => {
 
 const ContactSection = () => {
     return (
-        <section className='w-full min-h-screen px-80 pb-16'>
+        <section className='w-full min-h-screen px-80 pb-16' id='contact'>
             <SectionHeader>
                 Contact
             </SectionHeader>
