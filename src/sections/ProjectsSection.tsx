@@ -4,6 +4,7 @@ import LinkIcon from "../assets/icons/LinkIcon.tsx";
 import Css3BadgeIcon from "../assets/icons/Css3BadgeIcon.tsx";
 import TypeScriptBadgeIcon from "../assets/icons/TypeScriptBadgeIcon.tsx";
 import ReactJsBadgeIcon from "../assets/icons/ReactJsBadgeIcon.tsx";
+import projectsData from "../assets/projects.json";
 
 const matchBadgeToIcon = (badgeText: string): React.ReactNode | null => {
     switch (badgeText) {
@@ -95,19 +96,7 @@ const ProjectsSection = () => {
     const [projects, setProjects] = useState<ProjectProps[]>([]);
 
     useEffect(() => {
-        fetch('/projects.json')
-            .then(r => {
-                r.json()
-                    .then(j => {
-                        setProjects(j as ProjectProps[]);
-                    })
-                    .catch(() => {
-                        console.error("Could not parse projects as JSON.");
-                    })
-            })
-            .catch(() => {
-                console.error("Could not fetch projects.");
-            })
+        setProjects(projectsData as ProjectProps[]);
     }, []);
 
     return (
