@@ -91,11 +91,11 @@ interface DrawerMenuProps {
 
 const DrawerMenu = ({ show, onDismiss }: DrawerMenuProps) => {
     const showClassName = show
-        ? 'translate-x-0'
-        : '-translate-x-full';
+        ? 'translate-x-0 opacity-100'
+        : '-translate-x-full opacity-0';
 
     return (
-        <div className={`fixed z-20 w-screen top-0 bottom-0 left-0 ${showClassName} bg-violet-600 transition-transform
+        <div className={`fixed z-20 w-screen top-0 bottom-0 left-0 ${showClassName} bg-violet-600 transition-all
                          px-3`}
         >
             <button className='px-3 py-4 cursor-pointer w-fit' onClick={onDismiss} aria-label='Close the drawer menu'>
