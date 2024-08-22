@@ -2,7 +2,7 @@ import Logo from "./Logo.tsx";
 import EditPencilIcon from "../assets/icons/EditPencilIcon.tsx";
 import GitHubIcon from "../assets/icons/GitHubIcon.tsx";
 import AtSymbolIcon from "../assets/icons/AtSymbolIcon.tsx";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import BarsIcon from "../assets/icons/BarsIcon.tsx";
 import CrossIcon from "../assets/icons/CrossIcon.tsx";
 
@@ -129,11 +129,17 @@ export const Navbar = ({ show }: NavbarProps) => {
         setShowDrawer(true);
     };
 
+    useEffect(() => {
+        if (!show) {
+            setShowDrawer(false);
+        }
+    }, [show]);
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 lg:px-16 xl:px-52 2xl:px-80 bg-stone-100 
                          dark:bg-stone-950 py-4 flex flex-row justify-center lg:justify-between items-center
                          font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
-            <DrawerMenu show={showDrawer} onDismiss={onDrawerDismiss}/>
+            <DrawerMenu show={show && showDrawer} onDismiss={onDrawerDismiss}/>
 
             <div className='lg:hidden absolute top-1/2 -translate-y-1/2 left-0 pl-7 cursor-pointer'
                  onClick={onDrawerShow}
