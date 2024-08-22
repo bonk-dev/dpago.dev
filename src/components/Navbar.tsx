@@ -135,6 +135,15 @@ export const Navbar = ({ show }: NavbarProps) => {
         }
     }, [show]);
 
+    useEffect(() => {
+        if (showDrawer) {
+            document.body.classList.add('overflow-y-hidden');
+        }
+        else {
+            document.body.classList.remove('overflow-y-hidden');
+        }
+    }, [showDrawer]);
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 lg:px-16 xl:px-52 2xl:px-80 bg-stone-100 
                          dark:bg-stone-950 py-4 flex flex-row justify-center lg:justify-between items-center
