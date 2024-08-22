@@ -31,6 +31,9 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
         if (document.readyState !== 'complete') {
             window.addEventListener('DOMContentLoaded', checkPosition);
         }
+        else {
+            checkPosition();
+        }
 
         document.addEventListener('scroll', checkPosition);
 
