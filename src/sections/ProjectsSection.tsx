@@ -80,13 +80,13 @@ const Project = ({ title, description, links, badges }: ProjectProps) => {
             {/* TODO: Use DOMPurify */}
             <p dangerouslySetInnerHTML={{ __html: description }} className='mt-3'></p>
 
-            <section className='mt-8 flex flex-col justify-end h-full bottom-0'>
+            <footer className='mt-8 flex flex-col justify-end h-full bottom-0'>
                 {links.length > 0 ? (
                     links.map(l =>
                         <LinkItem key={l.label + l.to} label={l.label} to={l.to}/>
                     )
                 ) : null}
-            </section>
+            </footer>
         </article>
     );
 };
