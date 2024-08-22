@@ -44,7 +44,7 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     }, [checkPosition, onScrolledByHeroLinks]);
 
     return (
-        <div className='uppercase flex flex-col lg:block lg:text-xl xl:text-2xl font-mono tracking-[.61em] self-start'
+        <div className='uppercase flex flex-col lg:block lg:text-xl xl:text-2xl font-mono tracking-[.61em]'
              ref={linksContainerRef}
         >
             <NavbarLinks smallPadding={false}/>
@@ -56,8 +56,8 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
 // TODO: Add decors
 const HeroSection = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     return (
-        <section className='w-full h-screen grid grid-rows-[minmax(0,_1fr)_200px_minmax(0,_1fr)] items-center place-items-center'>
-            <Logo includeMd5={true} className='w-52 h-auto items-end self-end'/>
+        <section className='w-full h-screen flex flex-col items-center justify-center gap-12'>
+            <Logo includeMd5={true} className='w-28 lg:w-52 h-auto'/>
 
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='uppercase font-mono font-medium text-4xl lg:text-5xl'>
