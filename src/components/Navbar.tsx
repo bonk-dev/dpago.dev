@@ -23,8 +23,8 @@ const NavbarLink = ({ children, icon, smallPadding, to }: NavbarLinkProps) => {
     const paddingClass = smallPadding
         ? 'px-4 py-5'
         : 'px-12 py-5';
-    const generalClass = 'inline-block relative [&>span]:hover:w-full transition-colors border-violet-700 border-r-2 ' +
-                         'border-solid [&:last-child]:border-none';
+    const generalClass = 'inline-block relative [&>span]:hover:w-full transition-colors border-violet-700 lg:border-r-2 lg:border-b-0 ' +
+                         'border-solid border-b-2 [&:last-child]:border-none';
     const hoverClass = 'hover:text-white';
     const className = `${paddingClass} ${generalClass} ${hoverClass}`;
 
@@ -82,14 +82,15 @@ export const Navbar = ({ show }: NavbarProps) => {
         : '-translate-y-full';
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-10 px-80 bg-stone-100 dark:bg-stone-950 py-4 flex flex-row justify-between items-center +
-                        font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
-            <a className='flex flex-row items-center gap-3' href='/'>
+        <nav className={`fixed top-0 left-0 right-0 z-10 lg:px-16 xl:px-52 2xl:px-80 bg-stone-100 
+                         dark:bg-stone-950 py-4 flex flex-row justify-center lg:justify-between items-center
+                         font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
+            <a className='flex flex-row items-center gap-3 self-center' href='/'>
                 <Logo includeMd5={false} width={'55'} height={'48'}/>
                 <p className='font-mono font-medium text-3xl mt-2 tracking-normal text-black dark:text-white'>dpago.dev</p>
             </a>
 
-            <div>
+            <div className='hidden lg:block'>
                 <NavbarLinks smallPadding={true}/>
             </div>
         </nav>

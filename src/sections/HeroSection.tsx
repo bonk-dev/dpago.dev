@@ -44,12 +44,15 @@ const HeroLinks = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     }, [checkPosition, onScrolledByHeroLinks]);
 
     return (
-        <div className='uppercase text-2xl font-mono tracking-[.61em] self-start' ref={linksContainerRef}>
+        <div className='uppercase flex flex-col lg:block lg:text-xl xl:text-2xl font-mono tracking-[.61em] self-start'
+             ref={linksContainerRef}
+        >
             <NavbarLinks smallPadding={false}/>
         </div>
     );
 };
 
+//lg:px-16 xl:px-52 2xl:px-80
 // TODO: Add decors
 const HeroSection = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
     return (
@@ -57,10 +60,10 @@ const HeroSection = ({ onScrolledByHeroLinks }: ScrolledByProps) => {
             <Logo includeMd5={true} className='w-52 h-auto items-end self-end'/>
 
             <div className='flex flex-col justify-center items-center'>
-                <h1 className='uppercase font-mono font-medium text-5xl'>
+                <h1 className='uppercase font-mono font-medium text-4xl lg:text-5xl'>
                     Dawid Pągowski
                 </h1>
-                <h2 className='uppercase font-mono text-2xl tracking-[.61em]'>
+                <h2 className='uppercase font-mono text-xl lg:text-2xl tracking-[.49em] lg:tracking-[.61em]'>
                     Full Stack Dev
                 </h2>
             </div>

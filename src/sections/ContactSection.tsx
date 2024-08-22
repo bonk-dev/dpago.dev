@@ -23,13 +23,13 @@ const ProseSection = ({ children, header }: ProseSectionProps) => {
 
 const ContactSection = () => {
     return (
-        <section className='w-full min-h-screen px-80 pb-16' id='contact'>
+        <section className='w-full min-h-screen lg:px-16 xl:px-52 2xl:px-80 pb-16' id='contact'>
             <SectionHeader>
                 Contact
             </SectionHeader>
 
-            <div className='flex flex-row justify-between'>
-                <div>
+            <div className='flex flex-col-reverse justify-center lg:flex-row lg:justify-between'>
+                <div className='lg:pr-7'>
                     <ProseSection header={'CONNECT WITH ME'}>
                         I'm excited to explore new opportunities and collaborate on innovative projects. As an experienced
                         developer, I'm constantly seeking ways to apply my skills and expertise to contribute to your
@@ -52,13 +52,13 @@ const ContactSection = () => {
                     </ProseSection>
                 </div>
 
-                <section className='text-purple-600 dark:text-violet-500 underline font-semibold text-4xl'>
+                <section className='text-purple-600 dark:text-violet-500 underline font-semibold text-2xl lg:text-4xl'>
                     <div className='flex flex-row items-center gap-2'>
-                        <AtSymbolIcon width={'3rem'} height={'3rem'}/>
+                        <AtSymbolIcon className={'w-7 h-7 lg:h-10 lg:w-10'}/>
                         <a href='mailto:contact@dpago.dev'>contact@dpago.dev</a>
                     </div>
                     <div className='flex flex-row items-center gap-2'>
-                        <GitHubIcon width={'3rem'} height={'3rem'}/>
+                        <GitHubIcon className={'w-7 h-7 lg:h-10 lg:w-10'}/>
                         <a href='https://github.com/bonk-dev'>bonk-dev</a>
                     </div>
                 </section>

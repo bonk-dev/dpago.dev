@@ -111,7 +111,7 @@ const ProjectsSection = () => {
     }, []);
 
     return (
-        <section className='w-full min-h-screen px-80 pb-16 flex flex-col' id='projects'>
+        <section className='w-full min-h-screen lg:px-16 xl:px-52 2xl:px-80 pb-16 flex flex-col' id='projects'>
             <SectionHeader>
                 Projects
             </SectionHeader>
@@ -135,7 +135,7 @@ const ProjectsSection = () => {
             </div>
 
             <div className='flex flex-1 justify-self-center self-center items-center mt-20'>
-                <p className='text-4xl text-gray-500 dark:text-zinc-400'>Many more projects on the horizon</p>
+                <p className='text-2xl lg:text-4xl text-gray-500 dark:text-zinc-400'>Many more projects on the horizon</p>
             </div>
         </section>
     );
