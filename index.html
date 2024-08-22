@@ -5,6 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <style>
+      /* Prevents the background from flashing */
+
+      html {
+        background: rgb(255 255 255);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: rgb(24 24 27);
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
