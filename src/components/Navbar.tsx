@@ -19,10 +19,11 @@ interface NavbarLinkProps {
     icon: React.ReactNode,
     smallPadding: boolean,
     to: string,
-    onClick?: (to: string) => void
+    onClick?: (to: string) => void,
+    openInANewTab?: boolean
 }
 
-const NavbarLink = ({ children, icon, smallPadding, to, onClick }: NavbarLinkProps) => {
+const NavbarLink = ({ children, icon, smallPadding, to, onClick, openInANewTab }: NavbarLinkProps) => {
     const paddingClass = smallPadding
         ? 'px-4 py-5'
         : 'px-12 py-5';
@@ -38,7 +39,8 @@ const NavbarLink = ({ children, icon, smallPadding, to, onClick }: NavbarLinkPro
     };
 
     return (
-        <a href={to} className={className} onClick={handleOnClick}>
+        <a href={to} className={className} onClick={handleOnClick}
+           target={openInANewTab ? '_blank' : ''} rel={openInANewTab ? 'noopener' : ''}>
             <NavbarLinkBackground/>
             <div aria-hidden='true' className='inline [&>svg]:inline mr-3 [&>*]:w-7 [&>*]:h-7'>
                 {icon}
@@ -67,8 +69,9 @@ export const NavbarLinks = ({ smallPadding, onClick }: NavbarLinksProps) => {
             <NavbarLink
                 icon={<GitHubIcon/>}
                 smallPadding={smallPadding}
-                to={'#'}
+                to={'https://github.com/bonk-dev'}
                 onClick={onClick}
+                openInANewTab={true}
             >
                 GitHub
             </NavbarLink>
