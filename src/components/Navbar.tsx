@@ -98,8 +98,7 @@ const DrawerMenu = ({ show, onDismiss }: DrawerMenuProps) => {
         <div className={`fixed z-20 w-screen top-0 bottom-0 left-0 ${showClassName} bg-violet-600 transition-transform
                          px-3`}
         >
-            <button className='px-3 py-4 cursor-pointer w-fit' onClick={onDismiss}>
-                <CrossIcon className={'w-9 h-9'}/>
+            <button className='px-3 py-4 cursor-pointer w-fit' onClick={onDismiss} aria-label='Close the drawer menu'>
                 <CrossIcon className={'w-9 h-9'} aria-hidden/>
             </button>
 
