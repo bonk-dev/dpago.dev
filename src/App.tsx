@@ -18,9 +18,12 @@ function App() {
             <Background/>
             <div className='selection:bg-violet-300 dark:selection:bg-violet-800 dark:text-white'>
                 <Navbar show={showNavbar}/>
-                <HeroSection onScrolledByHeroLinks={setShowNavbar}/>
-                <ProjectsSection/>
-                <ContactSection/>
+
+                <main>
+                    <HeroSection onScrolledByHeroLinks={setShowNavbar}/>
+                    <ProjectsSection/>
+                    <ContactSection/>
+                </main>
             </div>
         </>
     )
