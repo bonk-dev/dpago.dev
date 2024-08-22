@@ -21,7 +21,7 @@ interface NavbarLinkProps {
 
 const NavbarLink = ({ children, icon, smallPadding, to }: NavbarLinkProps) => {
     const paddingClass = smallPadding
-        ? 'px-10 py-5'
+        ? 'px-4 py-5'
         : 'px-12 py-5';
     const generalClass = 'inline-block relative [&>span]:hover:w-full transition-colors border-violet-700 border-r-2 ' +
                          'border-solid [&:last-child]:border-none';
@@ -83,7 +83,7 @@ export const Navbar = ({ show }: NavbarProps) => {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 px-80 bg-stone-100 dark:bg-stone-950 py-4 flex flex-row justify-between items-center +
-                        text-xl font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
+                        font-mono tracking-[.61em] uppercase transition-transform ${visibilityClassNamePostfix}`}>
             <a className='flex flex-row items-center gap-3' href='/'>
                 <Logo includeMd5={false} width={'55'} height={'48'}/>
                 <p className='font-mono font-medium text-3xl mt-2 tracking-normal text-black dark:text-white'>dpago.dev</p>
