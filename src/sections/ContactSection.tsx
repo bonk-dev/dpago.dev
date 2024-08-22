@@ -31,23 +31,28 @@ const ContactSection = () => {
             <div className='flex flex-col-reverse justify-center lg:flex-row lg:justify-between'>
                 <div className='lg:pr-7'>
                     <ProseSection header={'CONNECT WITH ME'}>
-                        I'm excited to explore new opportunities and collaborate on innovative projects. As an experienced
+                        I'm excited to explore new opportunities and collaborate on innovative projects. As an
+                        experienced
                         developer, I'm constantly seeking ways to apply my skills and expertise to contribute to your
                         organization's goals.
                     </ProseSection>
 
                     <ProseSection header={'Available for New Challenges'}>
                         Whether you have a specific project in mind or are simply interested in discussing potential
-                        partnerships, I welcome the chance to connect. I'm currently open to new positions and assignments that align with my capabilities and passion for problem-solving.
+                        partnerships, I welcome the chance to connect. I'm currently open to new positions and
+                        assignments that align with my capabilities and passion for problem-solving.
                     </ProseSection>
 
                     <ProseSection header={"Let's Talk"}>
                         Please don't hesitate to reach out to me at contact@dpago.dev or through my GitHub profile at
-                        bonk-dev. I look forward to the opportunity to learn more about your needs and discuss how I can be
+                        bonk-dev. I look forward to the opportunity to learn more about your needs and discuss how I can
+                        be
                         of assistance.
 
-                        I'm eager to put my skills and experience to work for you. Together, I'm confident we can achieve
-                        remarkable results. I appreciate you taking the time to consider how I might be a valuable addition
+                        I'm eager to put my skills and experience to work for you. Together, I'm confident we can
+                        achieve
+                        remarkable results. I appreciate you taking the time to consider how I might be a valuable
+                        addition
                         to your team.
                     </ProseSection>
                 </div>
@@ -63,6 +68,18 @@ const ContactSection = () => {
                     </div>
                 </section>
             </div>
+
+            <footer className='[&_a]:text-purple-600 dark:[&_a]:text-purple-400 mt-20 flex gap-2 sm:gap-0 sm:flex-row flex-col justify-between'>
+                <span>
+                    Icons:
+                    <a href='https://popicons.cc' className='mx-3'>Popicons</a>
+                    <a href='https://www.tech-stack-icons.com'>Tech Stack Icons (modified)</a>
+                </span>
+
+                <a href='https://github.com/bonk-dev/dpago.dev' className=''>
+                    View this page on GitHub
+                </a>
+            </footer>
         </section>
     );
 };
