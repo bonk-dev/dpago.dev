@@ -138,7 +138,7 @@ export const Navbar = ({ show }: NavbarProps) => {
                 <BarsIcon className={'h-7 w-7'}/>
             </div>
 
-            <a className='flex flex-row items-center gap-3 self-center' href='/'>
+            <a className='flex flex-row items-center gap-3 self-center' href='#'>
                 <Logo includeMd5={false} className={'w-10 h-10 lg:w-12 lg:h-12'}/>
                 <p className='font-mono font-medium text-xl md:text-3xl mt-2 tracking-normal text-black dark:text-white'>dpago.dev</p>
             </a>
