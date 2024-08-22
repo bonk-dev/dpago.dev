@@ -8,11 +8,11 @@ import ReactJsBadgeIcon from "../assets/icons/ReactJsBadgeIcon.tsx";
 const matchBadgeToIcon = (badgeText: string): React.ReactNode | null => {
     switch (badgeText) {
         case "REACT":
-            return <ReactJsBadgeIcon width={'21'} height={'19'}/>
+            return <ReactJsBadgeIcon width={'21'} height={'19'} aria-hidden/>
         case "TYPESCRIPT":
-            return <TypeScriptBadgeIcon/>
+            return <TypeScriptBadgeIcon aria-hidden/>
         case "CSS3":
-            return <Css3BadgeIcon/>
+            return <Css3BadgeIcon aria-hidden/>
         default:
             return null;
     }
@@ -42,7 +42,7 @@ interface LinkItemProps {
 const LinkItem = ({ to, label }: LinkItemProps) => {
     return (
         <div className='flex flex-row items-center space-x-1'>
-            <LinkIcon width={'18'} height={'18'}/>
+            <LinkIcon width={'18'} height={'18'} aria-hidden/>
             <a className='text-purple-600 dark:text-purple-400 font-medium' href={to}>{label}</a>
         </div>
     );

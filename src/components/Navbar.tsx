@@ -100,6 +100,7 @@ const DrawerMenu = ({ show, onDismiss }: DrawerMenuProps) => {
         >
             <button className='px-3 py-4 cursor-pointer w-fit' onClick={onDismiss}>
                 <CrossIcon className={'w-9 h-9'}/>
+                <CrossIcon className={'w-9 h-9'} aria-hidden/>
             </button>
 
             <div className='[&>*]:w-full'>

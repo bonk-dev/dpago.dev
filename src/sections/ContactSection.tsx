@@ -59,11 +59,11 @@ const ContactSection = () => {
 
                 <section className='text-purple-600 dark:text-violet-500 underline font-semibold text-2xl lg:text-4xl'>
                     <div className='flex flex-row items-center gap-2'>
-                        <AtSymbolIcon className={'w-7 h-7 lg:h-10 lg:w-10'}/>
+                        <AtSymbolIcon className={'w-7 h-7 lg:h-10 lg:w-10'} aria-hidden/>
                         <a href='mailto:contact@dpago.dev'>contact@dpago.dev</a>
                     </div>
                     <div className='flex flex-row items-center gap-2'>
-                        <GitHubIcon className={'w-7 h-7 lg:h-10 lg:w-10'}/>
+                        <GitHubIcon className={'w-7 h-7 lg:h-10 lg:w-10'} aria-hidden/>
                         <a href='https://github.com/bonk-dev'>bonk-dev</a>
                     </div>
                 </section>

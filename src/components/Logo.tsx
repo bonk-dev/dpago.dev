@@ -15,6 +15,7 @@ const Logo = ({ includeMd5, ...props }: LogoProps) => {
             version="1.1"
             viewBox="0 0 68.486 59.346"
             xmlSpace="preserve"
+            aria-hidden
             {...props}
             className={className}
         >
