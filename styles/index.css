@@ -1,0 +1,96 @@
+:root {
+    --dpago-bg: #131313;
+    --dpago-header: #ff9d48;
+    --dpago-text: #ffb677;
+    --dpago-a-visited: #b3611d;
+}
+::selection {
+    background: var(--dpago-header);
+    color: var(--dpago-bg);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: var(--dpago-bg);
+    color: var(--dpago-text);
+    min-width: 100vw;
+    min-height: 100vh;
+
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    /*font-family: monospace;*/
+    font-family: sans-serif;
+}
+
+a {
+    color: var(--dpago-text);
+}
+a:visited {
+    color: var(--dpago-a-visited);
+}
+header {
+    color: var(--dpago-header);
+}
+
+.page-header {
+    font-family: monospace;
+}
+.page-header > p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.page-header > .ascii-logo {
+    font-size: .8rem;
+    white-space: pre;
+    text-align: center;
+}
+
+.main-padding {
+    padding-inline: 2rem;
+}
+
+main {
+    font-size: 1.1rem;
+}
+
+.main-section > header {
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .3rem;
+}
+.main-section > header pre {
+    padding-top: .5rem;
+    padding-inline: .5rem;
+    display: inline-block;
+    background: var(--dpago-header);
+    color: var(--dpago-bg);
+}
+.main-section h1 {
+    display: none;
+}
+
+.project-section header {
+    font-family: monospace;
+}
+
+@media only screen and (min-width: 501px) {
+    .page-header > .ascii-logo {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .main-padding {
+        padding-inline: 10rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-padding {
+        padding-inline: 20rem;
+    }
+}
