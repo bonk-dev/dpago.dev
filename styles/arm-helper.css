@@ -37,7 +37,7 @@ footer {
     bottom: 0;
     width: 100vw;
     background: var(--dpago-text);
-    color: var(--dpago--dark-bg);
+    color: var(--dpago-dark-bg);
     font-family: monospace;
     text-align: center;
     font-weight: bold;
@@ -46,7 +46,7 @@ footer {
 }
 
 footer > a, footer > a:visited, footer > a:active {
-    color: var(--dpago--dark-bg);
+    color: var(--dpago-dark-bg);
 }
 
 @media screen and (min-width: 690px) {
