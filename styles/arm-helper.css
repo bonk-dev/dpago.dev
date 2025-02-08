@@ -1,7 +1,7 @@
 :root {
     --border: 1px solid var(--dpago-text);
     font-family: sans-serif;
-    background: var(--dpago--dark-bg);
+    background: var(--dpago-dark-bg);
     color: var(--dpago-text);
 }
 

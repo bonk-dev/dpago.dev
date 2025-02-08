@@ -1,9 +1,3 @@
-:root {
-    --dpago-bg: #131313;
-    --dpago-header: #ff9d48;
-    --dpago-text: #ffb677;
-    --dpago-a-visited: #b3611d;
-}
 ::selection {
     background: var(--dpago-header);
     color: var(--dpago-bg);
