@@ -20,12 +20,47 @@ body {
 
 a {
     color: var(--dpago-text);
+    text-decoration: none;
 }
 a:visited {
-    color: var(--dpago-a-visited);
+    color: var(--dpago-text);
 }
 header {
     color: var(--dpago-header);
+}
+
+.h-100 {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.flex hr {
+    width: 100%;
+    margin-block: 2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav pre {
+    line-height: 110%;
+    font-size: .4rem;
+}
+nav .nav-logo {
+    font-size: .21rem;
+}
+nav a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-header {
@@ -40,59 +75,6 @@ header {
     font-size: .8rem;
     white-space: pre;
     text-align: center;
-}
-
-.main-padding {
-    padding-inline: 2rem;
-}
-
-main {
-    font-size: 1.1rem;
-}
-
-.main-section > header {
-    font-family: monospace;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: .3rem;
-}
-.main-section > header pre {
-    padding-top: .5rem;
-    padding-inline: .5rem;
-    display: inline-block;
-    background: var(--dpago-header);
-    color: var(--dpago-bg);
-}
-.main-section h1 {
-    display: none;
-}
-
-.project-section header {
-    font-family: monospace;
-}
-
-nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    margin-block: .7rem;
-    padding-block: .4rem;
-    border: 1px var(--dpago-header);
-    border-style: dashed;
-}
-nav a {
-    background: var(--dpago-text);
-    color: var(--dpago-bg);
-    font-family: monospace;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: .3rem;
-}
-nav a:visited, nav a:active {
-    color: var(--dpago-bg);
 }
 
 @media only screen and (min-width: 501px) {
