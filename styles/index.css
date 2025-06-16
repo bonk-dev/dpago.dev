@@ -49,13 +49,22 @@ header {
     width: 100%;
 }
 
-nav pre {
+/* nav pre {
     line-height: 110%;
     font-size: .4rem;
 }
 nav .nav-logo {
     font-size: .21rem;
+} */
+
+nav pre {
+    line-height: 110%;
+    font-size: .3rem;
 }
+nav .nav-logo {
+    font-size: .15rem;
+}
+
 nav a {
     display: flex;
     flex-flow: row nowrap;
